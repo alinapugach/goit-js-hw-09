@@ -34,17 +34,6 @@
   height: 100%;
 }
 
-.sl-overlay {
-  background-color: rgba(46, 47, 66, 0.8) !important;
-}
-
-.sl-counter,
-.sl-close,
-.sl-next,
-.sl-prev {
-  color: rgb(255, 255, 255) !important;
-}
-
 .sl-close {
   font-size: 2rem !important;
 }

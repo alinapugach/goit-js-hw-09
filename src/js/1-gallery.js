@@ -88,7 +88,6 @@ const item = images
 gallery.insertAdjacentHTML('afterbegin', item);
 
 const lightbox = new SimpleLightbox('.gallery-link', {
-  captions: true,
   captionSelector: 'img',
   captionType: 'text',
   captionsData: 'alt',

@@ -16,7 +16,7 @@ form.addEventListener('input', evt => {
   const localStorageItem =
     JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
 
-  if (evt.target.type.toString() == 'email') {
+  if (evt.target.type === 'email') {
     objToWrite.message = localStorageItem.message;
     objToWrite.email = evt.target.value.trim();
     localStorage.setItem(localStorageKey, JSON.stringify(objToWrite));
@@ -28,12 +28,11 @@ form.addEventListener('input', evt => {
 });
 
 form.addEventListener('submit', evt => {
+  evt.preventDefault();
   if (!textarea.value || !inputEmail.value) {
-    evt.preventDefault();
     alert('Please, fill all inputs.');
   } else {
-    console.log('Email:', evt.target.elements.email.value);
-    console.log('Message:', evt.target.elements.message.value);
+    console.log(objLocalStorage);
     localStorage.removeItem(localStorageKey);
     form.reset();
   }
